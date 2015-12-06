@@ -66,6 +66,7 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
                 mScanContents = bundle.getString("scanContents");
                 ean.setText(mScanContents);
                 Intent bookIntent = new Intent(getActivity(), BookService.class);
+                if(mScanContents!=null)
                 bookIntent.putExtra(BookService.EAN, mScanContents.toString());
                 bookIntent.setAction(BookService.FETCH_BOOK);
                 getActivity().startService(bookIntent);
@@ -153,7 +154,11 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
     }
 
     private void restartLoader(){
-        getLoaderManager().restartLoader(LOADER_ID, null, this);
+        try {
+            getLoaderManager().restartLoader(LOADER_ID, null, this);
+        }catch (NullPointerException ex){
+            ex.printStackTrace();
+        }
     }
 
     @Override
