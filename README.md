@@ -23,7 +23,7 @@ Leverage the functionality of a library in your app.
 You will improve two apps for this project:
 ######Alexandria: A book list and barcode scanner app.
 ######Football Scores : An app that tracks current and future football matches (soccer, for students in the USA).
-You can download the starting code for both apps in the Downloadables section in your Classroom. These apps are currently functional, and work in most cases for most users.
+
 Your job will be to take the user feedback in the UX Review node, and implement changes that will make each app production ready.
 All of the issues you need to address to meet specifications are hinted at in the UX Review. There are also a few optional ways in which the apps can be improved that are not mentioned in the UX Review.
 
